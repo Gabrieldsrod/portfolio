@@ -31,6 +31,8 @@ export interface Translations {
     card2Sub: string;
     card3Title: string;
     card3Sub: string;
+    snippetRole: string;
+    snippetTagline: string;
   };
   stack: {
     badge: string;
@@ -82,8 +84,8 @@ const DICTIONARY: Record<Language, Translations> = {
       status: 'Estagiário de Tecnologia no FIT',
       greeting: 'Olá, meu nome é',
       name: 'Gabriel da Silva Rodrigues',
-      role: 'Estagiário de Tecnologia no FIT | Desenvolvedor Fullstack',
-      summary: 'Desenvolvedor em formação focado em construir soluções web escaláveis, APIs robustas e ecossistemas IoT. Unindo fundamentos de Engenharia da Computação a práticas modernas de desenvolvimento.',
+      role: 'Estagiário de Tecnologia no FIT | Desenvolvedor Fullstack (Foco em Backend)',
+      summary: 'Desenvolvedor Fullstack com foco principal em Backend, especializado em criar APIs robustas, arquiteturas escaláveis e microsserviços com Java e Spring Boot, além de interfaces frontend reativas e ecossistemas IoT.',
       ctaProjects: 'Ver Projetos',
       ctaCv: 'Baixar CV'
     },
@@ -92,13 +94,15 @@ const DICTIONARY: Record<Language, Translations> = {
       title: 'Construindo tecnologia com foco em inovação & sustentabilidade',
       subtitle: 'Estagiário no FIT & Cursando Engenharia da Computação na FACENS',
       p1: 'Atualmente atuando como Estagiário de Tecnologia no FIT - Flextronics Instituto de Tecnologia e cursando Engenharia da Computação na FACENS, busco constante evolução conectando conceitos teóricos com a construção diária de sistemas práticos.',
-      p2: 'Com foco em desenvolvimento Full-stack e arquitetura de software, possuo experiência prática em ecossistemas Java (Spring Boot), Node.js, TypeScript e React, além de bancos de dados como PostgreSQL, orquestração com Docker e dispositivos IoT com ESP32.',
+      p2: 'Com atuação Fullstack e forte direcionamento para desenvolvimento Backend e arquitetura de software, possuo sólida experiência em ecossistemas Java (Spring Boot), Node.js, TypeScript e React, além de bancos de dados relacionais (PostgreSQL), conteinerização com Docker e soluções IoT com ESP32.',
       card1Title: 'FACENS',
       card1Sub: 'Eng. da Computação (2024 - Presente)',
       card2Title: 'FIT',
-      card2Sub: 'Estágio em Tech (Jun/2026 - Atual)',
+      card2Sub: 'Estágio em Tech (Jun/2026 - Presente)',
       card3Title: '+5 Projetos',
-      card3Sub: 'Mobile, Web & IoT'
+      card3Sub: 'Mobile, Web & IoT',
+      snippetRole: 'Desenvolvedor Fullstack (Foco em Backend)',
+      snippetTagline: 'Tecnologia & Sustentabilidade'
     },
     stack: {
       badge: 'Tecnologias & Skills',
@@ -148,8 +152,8 @@ const DICTIONARY: Record<Language, Translations> = {
       status: 'Technology Intern at FIT',
       greeting: "Hello, I'm",
       name: 'Gabriel da Silva Rodrigues',
-      role: 'Technology Intern at FIT | Fullstack Developer',
-      summary: 'Software engineering student focused on building scalable web APIs, intuitive applications, and IoT solutions. Combining Computer Engineering fundamentals with modern software practices.',
+      role: 'Technology Intern at FIT | Fullstack Developer (Backend Focused)',
+      summary: 'Software Engineering student & Fullstack Developer with a primary focus on Backend engineering, specializing in building robust APIs, scalable architectures, and microservices with Java and Spring Boot, as well as reactive frontend apps and IoT solutions.',
       ctaProjects: 'Explore Projects',
       ctaCv: 'Download Resume'
     },
@@ -158,13 +162,15 @@ const DICTIONARY: Record<Language, Translations> = {
       title: 'Engineering technology with focus on innovation & sustainability',
       subtitle: 'Technology Intern at FIT & Computer Engineering Student at FACENS',
       p1: 'Currently working as a Technology Intern at FIT - Flextronics Institute of Technology while pursuing Computer Engineering at FACENS, I constantly bridge academic theory with hands-on software development to deliver real-world solutions.',
-      p2: 'With a strong focus on Full-stack development and clean architecture, I have practical experience across Java (Spring Boot), Node.js, TypeScript, and React, alongside databases like PostgreSQL, Docker orchestration, and ESP32 IoT devices.',
+      p2: 'Working as a Fullstack Developer with a primary focus on Backend engineering and clean software architecture, I have solid experience across Java (Spring Boot), Node.js, TypeScript, and React, alongside relational databases (PostgreSQL), Docker containerization, and ESP32 IoT integrations.',
       card1Title: 'FACENS',
       card1Sub: 'Computer Eng. (2024 - Present)',
       card2Title: 'FIT',
       card2Sub: 'Tech Intern (Jun/2026 - Present)',
       card3Title: '5+ Projects',
-      card3Sub: 'Mobile, Web & IoT'
+      card3Sub: 'Mobile, Web & IoT',
+      snippetRole: 'Fullstack Developer (Backend Focused)',
+      snippetTagline: 'Technology & Sustainability'
     },
     stack: {
       badge: 'Technologies & Skills',

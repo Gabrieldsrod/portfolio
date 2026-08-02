@@ -120,13 +120,13 @@ interface TechItem {
                   <div class="font-mono text-xs text-red-400">class ComputerEngineer &#123;</div>
                   <div class="pl-4 font-mono text-xs text-zinc-400">name = "Gabriel da Silva Rodrigues";</div>
                   <div class="pl-4 font-mono text-xs text-zinc-400">university = "FACENS";</div>
-                  <div class="pl-4 font-mono text-xs text-zinc-400">targetRole = "Desenvolvedor Backend / Fullstack";</div>
+                  <div class="pl-4 font-mono text-xs text-zinc-400">targetRole = "{{ lang.t().about.snippetRole }}";</div>
                   <div class="pl-4 font-mono text-xs text-zinc-400">technologies = ["Java", "Spring Boot", "TypeScript", "React", "PostgreSQL", "ESP32"];</div>
                   <div class="font-mono text-xs text-red-400">&#125;</div>
                 </div>
 
                 <div class="pt-4 border-t border-zinc-800 text-xs text-zinc-400 flex items-center justify-between relative z-10">
-                  <span>Tecnologia & Sustentabilidade</span>
+                  <span>{{ lang.t().about.snippetTagline }}</span>
                   <span class="font-mono text-red-500 font-bold">v4.0</span>
                 </div>
               </div>
