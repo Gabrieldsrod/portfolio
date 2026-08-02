@@ -10,7 +10,7 @@
       "en": "Web platform engineered to solve study organization challenges by automatically distributing subjects based on priority, difficulty, and available time slots, optimizing learning consistency through intelligent weighting algorithms."
     },
     "technologies": ["Java 21", "Spring Boot", "React", "TypeScript", "Vite", "Tailwind CSS", "PostgreSQL", "Docker", "Swagger", "GitHub Actions", "CI/CD"],
-    "imageUrl": "assets/images/agendo.png",
+    "imageUrl": "/assets/images/agendo.png",
     "githubUrl": "https://github.com/luizamantovani/Projeto-Desenvolvimento-Web",
     "deployUrl": "",
     "featured": true
@@ -42,7 +42,7 @@
       "en": "Mobile application and geospatial portal developed to map, catalog, and share urban accessibility spots across the city, facilitating navigation and social inclusion through real-time location queries."
     },
     "technologies": ["TypeScript", "React Native", "PostgreSQL", "PostGIS"],
-    "imageUrl": "assets/images/my-way.png",
+    "imageUrl": "/assets/images/my-way.png",
     "githubUrl": "https://github.com/luizamantovani/UPX4_MapaDeAcessibilidade",
     "deployUrl": "",
     "featured": true
@@ -58,10 +58,10 @@
       "en": "Sustainable IoT system designed to foster conscious water and energy usage during showers, utilizing presence sensors for real-time telemetry and environmental awareness reporting."
     },
     "technologies": ["ESP32", "C", "IoT", "JavaScript", "HTML/CSS"],
-    "imageUrl": "assets/images/acqua-energy.png",
+    "imageUrl": "/assets/images/acqua-energy.png",
     "githubUrl": "https://github.com/Gabrieldsrod/acqua-energy",
     "deployUrl": "",
-    "featured": true
+    "featured": false
   },
   {
     "id": 5,
@@ -74,10 +74,10 @@
       "en": "Public health and sustainable automation initiative fighting mosquito-borne diseases via autonomous solar Aedes aegypti traps paired with a community awareness web portal and battery telemetry."
     },
     "technologies": ["ESP32", "C", "JavaScript", "HTML5", "CSS3", "Painel Solar", "IoT", "Mobile Web"],
-    "imageUrl": "assets/images/eco-lume.jpg",
+    "imageUrl": "/assets/images/eco-lume.jpg",
     "githubUrl": "https://github.com/Gabrieldsrod/EcoLume",
     "deployUrl": "",
-    "featured": true
+    "featured": false
   },
   {
     "id": 6,
@@ -90,7 +90,7 @@
       "en": "Native application developed to streamline card game matches and tournament organization, automating round timers, instant score calculations, and match history with secure storage."
     },
     "technologies": ["Java", "Android Studio", "SQLite"],
-    "imageUrl": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=1200&q=80",
+    "imageUrl": "/assets/images/cacheta.png",
     "githubUrl": "https://github.com/Gabrieldsrod/controle-cacheta",
     "deployUrl": "",
     "featured": false

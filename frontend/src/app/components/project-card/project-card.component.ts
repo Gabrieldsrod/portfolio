@@ -13,8 +13,9 @@ import { LanguageService } from '../../services/language.service';
       <!-- Project Cover Image with Hover Zoom -->
       <div class="relative w-full h-48 sm:h-52 overflow-hidden bg-zinc-800">
         <img
-          [src]="project.imageUrl"
+          [src]="displayImageUrl"
           [alt]="projectTitle"
+          (error)="onImageError()"
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy" />
         
@@ -92,6 +93,22 @@ export class ProjectCardComponent {
   @Input({ required: true }) project!: Project;
 
   readonly lang = inject(LanguageService);
+  imageFailed = false;
+
+  get displayImageUrl(): string {
+    if (this.imageFailed) {
+      return 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80';
+    }
+    const url = this.project.imageUrl;
+    if (url && !url.startsWith('http') && !url.startsWith('/')) {
+      return '/' + url;
+    }
+    return url;
+  }
+
+  onImageError(): void {
+    this.imageFailed = true;
+  }
 
   get projectTitle(): string {
     const current = this.lang.currentLang();

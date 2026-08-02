@@ -28,7 +28,8 @@ import { LanguageService } from '../../services/language.service';
               <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-88 lg:h-88 rounded-3xl overflow-hidden bg-zinc-900 border-2 border-zinc-800 shadow-2xl flex items-center justify-center">
                 
                 <img
-                  src="assets/images/profile.jpg"
+                  [src]="profileImageUrl"
+                  (error)="onImageError()"
                   alt="Gabriel da Silva Rodrigues"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
 
@@ -118,4 +119,14 @@ import { LanguageService } from '../../services/language.service';
 export class HeroComponent {
   readonly lang = inject(LanguageService);
   readonly imageError = signal<boolean>(false);
+
+  get profileImageUrl(): string {
+    return this.imageError()
+      ? 'https://ui-avatars.com/api/?name=Gabriel+Rodrigues&background=dc2626&color=fff&size=512'
+      : '/assets/images/profile.jpg';
+  }
+
+  onImageError(): void {
+    this.imageError.set(true);
+  }
 }
