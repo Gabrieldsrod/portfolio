@@ -78,7 +78,7 @@ import { LanguageService } from '../../services/language.service';
                 <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
                   GitHub
                 </h3>
-                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">&#64;GabrieldsRod</p>
+                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">&#64;Gabrieldsrod</p>
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -87,7 +87,7 @@ import { LanguageService } from '../../services/language.service';
             </div>
 
             <a
-              href="https://github.com/GabrieldsRod"
+              href="https://github.com/Gabrieldsrod"
               target="_blank"
               rel="noopener noreferrer"
               class="w-full py-3.5 px-4 rounded-xl bg-zinc-900 dark:bg-zinc-800 hover:bg-red-600 dark:hover:bg-red-600 text-white font-semibold text-xs shadow-md transition-all flex items-center justify-center gap-2">
@@ -114,7 +114,7 @@ import { LanguageService } from '../../services/language.service';
                 <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
                   E-mail
                 </h3>
-                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">gabrieldsrod&#64;gmail.com</p>
+                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">gabrieldsrodrigues19&#64;gmail.com</p>
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -123,7 +123,7 @@ import { LanguageService } from '../../services/language.service';
             </div>
 
             <a
-              href="mailto:gabrieldsrod@gmail.com"
+              href="mailto:gabrieldsrodrigues19@gmail.com"
               class="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-xs shadow-md shadow-red-600/25 flex items-center justify-center gap-2 transition-all">
               <span>{{ lang.t().contact.connectEmail }}</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

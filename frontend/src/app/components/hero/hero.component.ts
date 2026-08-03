@@ -115,7 +115,7 @@ interface Particle {
 
             <!-- Social Links -->
             <div class="flex items-center justify-center lg:justify-start gap-4 pt-4 text-zinc-600 dark:text-zinc-400">
-              <a href="https://github.com/GabrieldsRod" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/Gabrieldsrod" target="_blank" rel="noopener noreferrer"
                  class="p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-red-600 dark:hover:text-red-500 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all hover:scale-110"
                  title="GitHub Profile">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -131,7 +131,7 @@ interface Particle {
                 </svg>
               </a>
 
-              <a href="mailto:gabrieldsrod@gmail.com"
+              <a href="mailto:gabrieldsrodrigues19@gmail.com"
                  class="p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-red-600 dark:hover:text-red-500 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all hover:scale-110"
                  title="Send Email">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

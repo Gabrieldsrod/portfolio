@@ -69,7 +69,7 @@ portfolio/
 
 1. **Clonar o repositório:**
    ```bash
-   git clone https://github.com/GabrieldsRod/portfolio.git
+   git clone https://github.com/Gabrieldsrod/portfolio.git
    cd portfolio/frontend
    ```
 
@@ -112,7 +112,7 @@ Para detalhes completos de como fazer o deploy na sua própria máquina virtual,
 
 - **Website:** [gabrieldsrod.dev.br](https://gabrieldsrod.dev.br)
 - **LinkedIn:** [linkedin.com/in/gabrieldsrod](https://www.linkedin.com/in/gabrieldsrod/)
-- **GitHub:** [github.com/GabrieldsRod](https://github.com/Gabrieldsrod)
+- **GitHub:** [github.com/Gabrieldsrod](https://github.com/Gabrieldsrod)
 - **E-mail:** gabrieldsrodrigues19@gmail.com
 
 ---
