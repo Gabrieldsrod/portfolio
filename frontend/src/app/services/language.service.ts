@@ -41,6 +41,8 @@ export interface Translations {
     backend: string;
     frontend: string;
     devopsDb: string;
+    learning: string;
+    learningBadge: string;
   };
   projects: {
     badge: string;
@@ -110,7 +112,9 @@ const DICTIONARY: Record<Language, Translations> = {
       subtitle: 'Linguagens, frameworks e ferramentas que utilizo no meu dia a dia de estudos e projetos.',
       backend: 'Backend & Linguagens',
       frontend: 'Frontend & Mobile',
-      devopsDb: 'Banco de Dados & Ferramentas'
+      devopsDb: 'Banco de Dados & Ferramentas',
+      learning: 'Atualmente Aprendendo',
+      learningBadge: 'Em Foco'
     },
     projects: {
       badge: 'Portfólio',
@@ -178,7 +182,9 @@ const DICTIONARY: Record<Language, Translations> = {
       subtitle: 'Languages, frameworks, and tools I use daily for projects and software engineering.',
       backend: 'Backend & Languages',
       frontend: 'Frontend & Mobile',
-      devopsDb: 'Databases & Tools'
+      devopsDb: 'Databases & Tools',
+      learning: 'Currently Learning',
+      learningBadge: 'In Focus'
     },
     projects: {
       badge: 'Portfolio',

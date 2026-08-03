@@ -156,7 +156,7 @@ interface TechItem {
         </div>
 
         <!-- Tech Stack Grid Categories -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Category 1: Backend & APIs -->
           <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800/80 shadow-sm space-y-6 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all">
@@ -221,6 +221,36 @@ interface TechItem {
             </div>
           </div>
 
+          <!-- Category 4: Currently Learning -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/90 border border-red-500/30 dark:border-red-500/20 shadow-sm space-y-6 hover:border-red-600/60 dark:hover:border-red-500/60 transition-all relative overflow-hidden group">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-3">
+                <div class="p-3 rounded-xl bg-red-600/10 text-red-600 dark:text-red-500">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-zinc-900 dark:text-white">
+                  {{ lang.t().stack.learning }}
+                </h3>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold bg-red-600/10 text-red-600 dark:text-red-400 border border-red-500/20">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                {{ lang.t().stack.learningBadge }}
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span *ngFor="let item of learningTechs"
+                    class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-red-500/10 dark:bg-red-500/10 text-red-700 dark:text-red-300 border border-red-500/30 dark:border-red-500/20 hover:border-red-600 dark:hover:border-red-500 transition-colors flex items-center gap-1">
+                {{ item }}
+              </span>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -231,14 +261,18 @@ export class AboutComponent {
   readonly lang = inject(LanguageService);
 
   readonly backendTechs = [
-    'Java', 'Spring Boot', 'Node.js', 'NestJs', 'TypeScript', 'JavaScript', 'C',
+    'Java', 'Spring Boot', 'Node.js', 'TypeScript', 'JavaScript', 'C',
   ];
 
   readonly frontendTechs = [
-    'React', 'React Native', 'Angular', 'TypeScript', 'HTML', 'CSS', 
+    'React', 'React Native', 'TypeScript', 'HTML', 'CSS', 
   ];
 
   readonly devopsTechs = [
     'PostgreSQL', 'SQLite', 'Docker', 'ESP32 & IoT'
+  ];
+
+  readonly learningTechs = [
+    'Angular', 'NestJS', 'Redis'
   ];
 }
