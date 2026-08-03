@@ -131,12 +131,18 @@ interface Particle {
                 </svg>
               </a>
 
-              <a href="mailto:gabrieldsrodrigues19@gmail.com"
-                 class="p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-red-600 dark:hover:text-red-500 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all hover:scale-110"
-                 title="Send Email">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrieldsrodrigues19@gmail.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 (click)="onEmailClick($event)"
+                 class="relative p-3 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-red-600 dark:hover:text-red-500 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all hover:scale-110"
+                 title="gabrieldsrodrigues19@gmail.com">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
+                <span *ngIf="copiedEmail()" class="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-[10px] font-mono font-bold shadow-lg whitespace-nowrap z-20">
+                  {{ lang.t().contact.emailCopied }}
+                </span>
               </a>
             </div>
 
@@ -188,6 +194,18 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('heroCanvas') heroCanvasRef!: ElementRef<HTMLCanvasElement>;
 
   readonly imageError = signal<boolean>(false);
+  readonly copiedEmail = signal<boolean>(false);
+
+  onEmailClick(event: MouseEvent): void {
+    const email = 'gabrieldsrodrigues19@gmail.com';
+    if (isPlatformBrowser(this.platformId)) {
+      if (navigator?.clipboard?.writeText) {
+        navigator.clipboard.writeText(email);
+      }
+      this.copiedEmail.set(true);
+      setTimeout(() => this.copiedEmail.set(false), 2500);
+    }
+  };
 
   private animFrameId: number | null = null;
   private particles: Particle[] = [];

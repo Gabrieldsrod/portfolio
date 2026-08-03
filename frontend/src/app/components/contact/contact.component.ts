@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 
@@ -63,7 +63,7 @@ import { LanguageService } from '../../services/language.service';
           </div>
 
           <!-- 2. GitHub Card -->
-          <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-red-600/50 dark:hover:border-red-500/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+          <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-gray-600/50 dark:hover:border-gray-500/50 transition-all duration-300 flex flex-col justify-between space-y-6">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <div class="p-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white">
@@ -75,7 +75,7 @@ import { LanguageService } from '../../services/language.service';
               </div>
 
               <div class="space-y-1">
-                <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
+                <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-gray-500 dark:group-hover:text-gray-500 transition-colors">
                   GitHub
                 </h3>
                 <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">&#64;Gabrieldsrod</p>
@@ -90,7 +90,7 @@ import { LanguageService } from '../../services/language.service';
               href="https://github.com/Gabrieldsrod"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full py-3.5 px-4 rounded-xl bg-zinc-900 dark:bg-zinc-800 hover:bg-red-600 dark:hover:bg-red-600 text-white font-semibold text-xs shadow-md transition-all flex items-center justify-center gap-2">
+              class="w-full py-3.5 px-4 rounded-xl bg-zinc-900 dark:bg-zinc-800 hover:bg-gray-600 dark:hover:bg-gray-600 text-white font-semibold text-xs shadow-md transition-all flex items-center justify-center gap-2">
               <span>{{ lang.t().contact.connectGitHub }}</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -114,7 +114,9 @@ import { LanguageService } from '../../services/language.service';
                 <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
                   E-mail
                 </h3>
-                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">gabrieldsrodrigues19&#64;gmail.com</p>
+                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400 select-all cursor-pointer hover:text-red-600 dark:hover:text-red-500 transition-colors" (click)="copyEmail()" title="Clique para copiar">
+                  gabrieldsrodrigues19&#64;gmail.com
+                </p>
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
@@ -122,14 +124,33 @@ import { LanguageService } from '../../services/language.service';
               </p>
             </div>
 
-            <a
-              href="mailto:gabrieldsrodrigues19@gmail.com"
-              class="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-xs shadow-md shadow-red-600/25 flex items-center justify-center gap-2 transition-all">
-              <span>{{ lang.t().contact.connectEmail }}</span>
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
+            <div class="space-y-2">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrieldsrodrigues19@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-xs shadow-md shadow-red-600/25 flex items-center justify-center gap-2 transition-all">
+                <span>{{ lang.t().contact.connectEmail }}</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <button
+                type="button"
+                (click)="copyEmail()"
+                class="w-full py-2.5 px-4 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                <svg *ngIf="!copied()" class="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <svg *ngIf="copied()" class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span [class.text-emerald-600]="copied()" [class.dark:text-emerald-400]="copied()">
+                  {{ copied() ? lang.t().contact.emailCopied : lang.t().contact.copyEmail }}
+                </span>
+              </button>
+            </div>
           </div>
 
         </div>
@@ -140,4 +161,14 @@ import { LanguageService } from '../../services/language.service';
 })
 export class ContactComponent {
   readonly lang = inject(LanguageService);
+  readonly copied = signal(false);
+
+  copyEmail(): void {
+    const email = 'gabrieldsrodrigues19@gmail.com';
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(email);
+    }
+    this.copied.set(true);
+    setTimeout(() => this.copied.set(false), 3000);
+  }
 }

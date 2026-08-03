@@ -67,6 +67,8 @@ export interface Translations {
     connectGitHub: string;
     connectEmail: string;
     connectWhatsApp: string;
+    copyEmail: string;
+    emailCopied: string;
   };
   footer: {
     rights: string;
@@ -137,8 +139,10 @@ const DICTIONARY: Record<Language, Translations> = {
       availabilityValue: 'Estagiário de Tecnologia no FIT',
       connectLinkedIn: 'Conectar no LinkedIn',
       connectGitHub: 'Ver Repositórios no GitHub',
-      connectEmail: 'Enviar E-mail Direto',
-      connectWhatsApp: 'Enviar Mensagem no WhatsApp'
+      connectEmail: 'Enviar pelo Gmail',
+      connectWhatsApp: 'Enviar Mensagem no WhatsApp',
+      copyEmail: 'Copiar Endereço de E-mail',
+      emailCopied: 'E-mail Copiado!'
     },
     footer: {
       rights: 'Todos os direitos reservados.',
@@ -207,8 +211,10 @@ const DICTIONARY: Record<Language, Translations> = {
       availabilityValue: 'Technology Intern at FIT',
       connectLinkedIn: 'Connect on LinkedIn',
       connectGitHub: 'Explore GitHub Repositories',
-      connectEmail: 'Send Direct Email',
-      connectWhatsApp: 'Message on WhatsApp'
+      connectEmail: 'Send via Gmail',
+      connectWhatsApp: 'Message on WhatsApp',
+      copyEmail: 'Copy Email Address',
+      emailCopied: 'Email Copied!'
     },
     footer: {
       rights: 'All rights reserved.',
