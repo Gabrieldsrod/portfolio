@@ -1,0 +1,26 @@
+# Configuração do Nginx no Host (Proxy Reverso para a VM)
+# Copie este arquivo para /etc/nginx/sites-available/seu-dominio.conf na VM
+# e faça o link simbólico para /etc/nginx/sites-enabled/
+
+server {
+    listen 80;
+    server_name seu-dominio.com www.seu-dominio.com; # Substitua pelo seu domínio ou IP da VM
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+
+        # Preservar dados de cabeçalho do cliente original
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Tamanho máximo de upload / timeouts
+    client_max_body_size 10M;
+}
