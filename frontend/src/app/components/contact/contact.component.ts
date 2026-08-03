@@ -46,7 +46,7 @@ import { LanguageService } from '../../services/language.service';
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Acompanhe minha trajetória profissional, conexões e publicações sobre desenvolvimento.
+                {{ lang.t().contact.linkedinDesc }}
               </p>
             </div>
 
@@ -82,7 +82,7 @@ import { LanguageService } from '../../services/language.service';
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Confira meus repositórios, commits, projetos pessoais e código fonte de estudos.
+                {{ lang.t().contact.githubDesc }}
               </p>
             </div>
 
@@ -114,13 +114,13 @@ import { LanguageService } from '../../services/language.service';
                 <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
                   E-mail
                 </h3>
-                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400 select-all cursor-pointer hover:text-red-600 dark:hover:text-red-500 transition-colors" (click)="copyEmail()" title="Clique para copiar">
+                <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400 select-all cursor-pointer hover:text-red-600 dark:hover:text-red-500 transition-colors" (click)="copyEmail()" [title]="lang.t().contact.clickToCopy">
                   gabrieldsrodrigues19&#64;gmail.com
                 </p>
               </div>
 
               <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Prefere conversa direta por e-mail? Mande uma mensagem para tratarmos de propostas ou projetos.
+                {{ lang.t().contact.emailDesc }}
               </p>
             </div>
 

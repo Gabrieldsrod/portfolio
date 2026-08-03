@@ -69,6 +69,10 @@ export interface Translations {
     connectWhatsApp: string;
     copyEmail: string;
     emailCopied: string;
+    linkedinDesc: string;
+    githubDesc: string;
+    emailDesc: string;
+    clickToCopy: string;
   };
   footer: {
     rights: string;
@@ -142,7 +146,11 @@ const DICTIONARY: Record<Language, Translations> = {
       connectEmail: 'Enviar pelo Gmail',
       connectWhatsApp: 'Enviar Mensagem no WhatsApp',
       copyEmail: 'Copiar Endereço de E-mail',
-      emailCopied: 'E-mail Copiado!'
+      emailCopied: 'E-mail Copiado!',
+      linkedinDesc: 'Acompanhe minha trajetória profissional, conexões e publicações sobre desenvolvimento.',
+      githubDesc: 'Confira meus repositórios, commits, projetos pessoais e código fonte de estudos.',
+      emailDesc: 'Prefere conversa direta por e-mail? Mande uma mensagem para tratarmos de propostas ou projetos.',
+      clickToCopy: 'Clique para copiar'
     },
     footer: {
       rights: 'Todos os direitos reservados.',
@@ -214,7 +222,11 @@ const DICTIONARY: Record<Language, Translations> = {
       connectEmail: 'Send via Gmail',
       connectWhatsApp: 'Message on WhatsApp',
       copyEmail: 'Copy Email Address',
-      emailCopied: 'Email Copied!'
+      emailCopied: 'Email Copied!',
+      linkedinDesc: 'Follow my professional journey, network connections, and software engineering posts.',
+      githubDesc: 'Explore my repositories, commit history, personal projects, and code samples.',
+      emailDesc: 'Prefer direct email communication? Send a message to discuss opportunities or projects.',
+      clickToCopy: 'Click to copy'
     },
     footer: {
       rights: 'All rights reserved.',
