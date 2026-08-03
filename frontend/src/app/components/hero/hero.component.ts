@@ -101,16 +101,16 @@ interface Particle {
                 </svg>
               </a>
 
-              <a
-                href="assets/cv-gabriel-rodrigues.pdf"
-                target="_blank"
-                download
-                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white border border-zinc-200 dark:border-zinc-800 font-semibold text-sm transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                <svg class="w-4 h-4 text-red-600 dark:text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <button
+                disabled
+                type="button"
+                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-900/60 text-zinc-400 dark:text-zinc-500 border border-zinc-200/80 dark:border-zinc-800/60 font-semibold text-sm cursor-not-allowed opacity-60 flex items-center justify-center gap-2"
+                title="CV indisponível no momento / Resume currently unavailable">
+                <svg class="w-4 h-4 text-zinc-400 dark:text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
                 <span>{{ lang.t().hero.ctaCv }}</span>
-              </a>
+              </button>
             </div>
 
             <!-- Social Links -->
