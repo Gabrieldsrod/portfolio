@@ -16,6 +16,9 @@ import { LanguageService } from '../../services/language.service';
           [src]="displayImageUrl"
           [alt]="projectTitle"
           (error)="onImageError()"
+          width="400"
+          height="225"
+          decoding="async"
           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy" />
         

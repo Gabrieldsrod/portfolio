@@ -59,6 +59,11 @@ interface Particle {
                   [src]="profileImageUrl"
                   (error)="onImageError()"
                   alt="Gabriel da Silva Rodrigues"
+                  width="352"
+                  height="352"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
@@ -196,7 +201,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   get profileImageUrl(): string {
     return this.imageError()
       ? 'https://ui-avatars.com/api/?name=Gabriel+Rodrigues&background=dc2626&color=fff&size=512'
-      : '/assets/images/profile.jpg';
+      : '/assets/images/profile.webp';
   }
 
   onImageError(): void {

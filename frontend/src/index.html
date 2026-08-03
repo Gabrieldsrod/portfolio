@@ -11,13 +11,31 @@
     />
     <meta name="theme-color" content="#dc2626" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+
+    <!-- LCP Image Preload -->
+    <link rel="preload" as="image" href="/assets/images/profile.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body
@@ -27,3 +45,4 @@
     <noscript>Please enable JavaScript to continue using this application.</noscript>
   </body>
 </html>
+
