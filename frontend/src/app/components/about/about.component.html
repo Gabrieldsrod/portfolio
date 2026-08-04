@@ -88,30 +88,30 @@
 
       <!-- Right Column: Visual Avatar / Engineering Badge -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="relative w-full max-w-sm aspect-square rounded-3xl p-1 bg-gradient-to-b from-red-600/30 via-zinc-400/20 to-zinc-900/40 shadow-2xl flex items-center justify-center">
-          <div class="w-full h-full rounded-[22px] bg-zinc-900 p-8 flex flex-col justify-between relative overflow-hidden text-zinc-100">
+        <div class="relative w-full max-w-sm aspect-square rounded-3xl bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-xl flex items-center justify-center p-6 sm:p-8 overflow-hidden text-zinc-100 backdrop-blur-sm">
+          <div class="w-full h-full flex flex-col justify-between relative z-10">
             <!-- Background Grid Accent -->
-            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#dc2626_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="absolute -inset-8 opacity-15 bg-[radial-gradient(#71717a_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
             
             <div class="flex items-center justify-between relative z-10">
-              <span class="px-3 py-1 rounded-full bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-mono font-semibold">
+              <span class="px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/60 text-zinc-300 text-xs font-mono font-semibold">
                 TECH INTERN
               </span>
-              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
             </div>
 
-            <div class="space-y-2 relative z-10 my-auto py-6">
-              <div class="font-mono text-xs text-red-400">class ComputerEngineer &#123;</div>
+            <div class="space-y-2 relative z-10 my-auto py-4">
+              <div class="font-mono text-xs text-red-500 dark:text-red-400">class ComputerEngineer &#123;</div>
               <div class="pl-4 font-mono text-xs text-zinc-400">name = "Gabriel da Silva Rodrigues";</div>
               <div class="pl-4 font-mono text-xs text-zinc-400">university = "FACENS";</div>
               <div class="pl-4 font-mono text-xs text-zinc-400">targetRole = "{{ lang.t().about.snippetRole }}";</div>
               <div class="pl-4 font-mono text-xs text-zinc-400">technologies = ["Java", "Spring Boot", "TypeScript", "React", "PostgreSQL", "ESP32"];</div>
-              <div class="font-mono text-xs text-red-400">&#125;</div>
+              <div class="font-mono text-xs text-red-500 dark:text-red-400">&#125;</div>
             </div>
 
             <div class="pt-4 border-t border-zinc-800 text-xs text-zinc-400 flex items-center justify-between relative z-10">
               <span>{{ lang.t().about.snippetTagline }}</span>
-              <span class="font-mono text-red-500 font-bold">v4.0</span>
+              <span class="font-mono text-zinc-500 font-bold">v4.0</span>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@
       </div>
 
       <!-- Category 4: Currently Learning -->
-      <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/90 border border-red-500/30 dark:border-red-500/20 shadow-sm space-y-6 hover:border-red-600/60 dark:hover:border-red-500/60 transition-all relative overflow-hidden group">
+      <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/90 border border-zinc-200 dark:border-zinc-800/80 shadow-sm space-y-6 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all relative overflow-hidden group">
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-3">
             <div class="p-3 rounded-xl bg-red-600/10 text-red-600 dark:text-red-500">

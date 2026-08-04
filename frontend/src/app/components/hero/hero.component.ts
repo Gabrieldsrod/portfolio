@@ -270,10 +270,7 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
         else if (p1.colorType === 'white') colorRgb = isDark ? '255, 255, 255' : '120, 113, 108';
 
         ctx.fillStyle = `rgba(${colorRgb}, ${p1.currentAlpha * particleAlphaMultiplier})`;
-        ctx.shadowBlur = p1.radius > 1.8 ? 6 : 0;
-        ctx.shadowColor = `rgba(${colorRgb}, 0.6)`;
         ctx.fill();
-        ctx.shadowBlur = 0;
       }
 
       this.animFrameId = requestAnimationFrame(render);
