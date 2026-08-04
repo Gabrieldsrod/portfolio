@@ -1,25 +1,23 @@
-<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#09090B]/80 border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors duration-300">
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[#0F0F12]/80 border-b border-zinc-200/80 dark:border-zinc-800/80 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     
     <!-- Logo / Name -->
-    <a href="#" class="group flex items-center gap-2 text-lg sm:text-xl font-bold tracking-tight text-zinc-900 dark:text-white transition">
-      <span class="text-red-600 dark:text-red-500 group-hover:rotate-12 transition-transform duration-300 font-mono">&lt;</span>
-      <span>Gabriel<span class="text-red-600 dark:text-red-500">.dev</span></span>
-      <span class="text-red-600 dark:text-red-500 group-hover:-rotate-12 transition-transform duration-300 font-mono">/&gt;</span>
+    <a href="#" class="group flex items-center gap-1.5 text-lg sm:text-xl font-bold tracking-tight text-zinc-900 dark:text-white transition">
+      <span>Gabrieldsrod<span class="text-red-600 dark:text-red-500 font-extrabold">.dev</span></span>
     </a>
 
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="#about" class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-500 transition-colors">
+      <a href="#about" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
         {{ lang.t().nav.about }}
       </a>
-      <a href="#stack" class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-500 transition-colors">
+      <a href="#stack" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
         {{ lang.t().nav.stack }}
       </a>
-      <a href="#projects" class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-500 transition-colors">
+      <a href="#projects" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
         {{ lang.t().nav.projects }}
       </a>
-      <a href="#contact" class="text-zinc-600 dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-500 transition-colors">
+      <a href="#contact" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
         {{ lang.t().nav.contact }}
       </a>
     </nav>
@@ -31,19 +29,19 @@
       <button
         (click)="lang.toggleLanguage()"
         type="button"
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 hover:border-red-600/50 dark:hover:border-red-500/50 transition-all cursor-pointer"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 transition-all cursor-pointer"
         aria-label="Alternar Idioma / Toggle Language">
-        <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-        <span [class.font-extrabold]="lang.currentLang() === 'pt'" [class.text-red-600]="lang.currentLang() === 'pt'">PT</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        <span [class.font-bold]="lang.currentLang() === 'pt'" [class.text-zinc-900]="lang.currentLang() === 'pt'" [class.dark:text-white]="lang.currentLang() === 'pt'">PT</span>
         <span class="text-zinc-400">|</span>
-        <span [class.font-extrabold]="lang.currentLang() === 'en'" [class.text-red-600]="lang.currentLang() === 'en'">EN</span>
+        <span [class.font-bold]="lang.currentLang() === 'en'" [class.text-zinc-900]="lang.currentLang() === 'en'" [class.dark:text-white]="lang.currentLang() === 'en'">EN</span>
       </button>
 
       <!-- Dark / Light Theme Toggle -->
       <button
         (click)="theme.toggleTheme()"
         type="button"
-        class="p-2 rounded-full bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 hover:text-red-600 dark:hover:text-red-500 hover:border-red-600/40 dark:hover:border-red-500/40 transition-all cursor-pointer"
+        class="p-2 rounded-full bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-700 transition-all cursor-pointer"
         [attr.aria-label]="theme.isDarkMode() ? 'Ativar modo claro' : 'Ativar modo escuro'">
         
         <!-- Sun Icon (shown in dark mode) -->
@@ -74,17 +72,17 @@
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div *ngIf="mobileMenuOpen()" class="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-[#09090B]/95 backdrop-blur-lg px-4 pt-3 pb-5 space-y-3">
-    <a (click)="mobileMenuOpen.set(false)" href="#about" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-red-600 dark:hover:text-red-500">
+  <div *ngIf="mobileMenuOpen()" class="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-[#0F0F12]/95 backdrop-blur-lg px-4 pt-3 pb-5 space-y-3">
+    <a (click)="mobileMenuOpen.set(false)" href="#about" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white">
       {{ lang.t().nav.about }}
     </a>
-    <a (click)="mobileMenuOpen.set(false)" href="#stack" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-red-600 dark:hover:text-red-500">
+    <a (click)="mobileMenuOpen.set(false)" href="#stack" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white">
       {{ lang.t().nav.stack }}
     </a>
-    <a (click)="mobileMenuOpen.set(false)" href="#projects" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-red-600 dark:hover:text-red-500">
+    <a (click)="mobileMenuOpen.set(false)" href="#projects" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white">
       {{ lang.t().nav.projects }}
     </a>
-    <a (click)="mobileMenuOpen.set(false)" href="#contact" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-red-600 dark:hover:text-red-500">
+    <a (click)="mobileMenuOpen.set(false)" href="#contact" class="block py-2 text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white">
       {{ lang.t().nav.contact }}
     </a>
   </div>

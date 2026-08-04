@@ -5,7 +5,7 @@
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
       
       <div class="max-w-2xl space-y-3">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/10 text-red-600 dark:text-red-500 text-xs font-semibold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/60 text-xs font-semibold uppercase tracking-wider">
           <span>{{ lang.t().projects.badge }}</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
@@ -23,8 +23,8 @@
           type="button"
           [class.bg-white]="activeFilter() === 'all'"
           [class.dark:bg-zinc-900]="activeFilter() === 'all'"
-          [class.text-red-600]="activeFilter() === 'all'"
-          [class.dark:text-red-500]="activeFilter() === 'all'"
+          [class.text-zinc-900]="activeFilter() === 'all'"
+          [class.dark:text-white]="activeFilter() === 'all'"
           [class.shadow-sm]="activeFilter() === 'all'"
           class="px-4 py-2 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer">
           {{ lang.t().projects.filterAll }} ({{ projects().length }})
@@ -35,8 +35,8 @@
           type="button"
           [class.bg-white]="activeFilter() === 'featured'"
           [class.dark:bg-zinc-900]="activeFilter() === 'featured'"
-          [class.text-red-600]="activeFilter() === 'featured'"
-          [class.dark:text-red-500]="activeFilter() === 'featured'"
+          [class.text-zinc-900]="activeFilter() === 'featured'"
+          [class.dark:text-white]="activeFilter() === 'featured'"
           [class.shadow-sm]="activeFilter() === 'featured'"
           class="px-4 py-2 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-all cursor-pointer">
           {{ lang.t().projects.filterFeatured }} ({{ featuredCount() }})

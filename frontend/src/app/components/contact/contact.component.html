@@ -1,9 +1,9 @@
-<section id="contact" class="py-20 relative bg-zinc-50 dark:bg-[#09090B] border-t border-zinc-200/60 dark:border-zinc-800/60 transition-colors duration-300">
+<section id="contact" class="py-20 relative bg-zinc-50 dark:bg-[#0F0F12] border-t border-zinc-200/60 dark:border-zinc-800/60 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Header -->
     <div class="max-w-3xl space-y-3 mb-16 text-center mx-auto">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/10 text-red-600 dark:text-red-500 text-xs font-semibold uppercase tracking-wider">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700/60 text-xs font-semibold uppercase tracking-wider">
         <span>{{ lang.t().contact.badge }}</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white tracking-tight">
@@ -18,7 +18,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
       
       <!-- 1. LinkedIn Card -->
-      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-blue-600/50 dark:hover:border-blue-500/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between space-y-6">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <div class="p-3.5 rounded-2xl bg-blue-600/10 text-blue-600 dark:text-blue-400">
@@ -54,7 +54,7 @@
       </div>
 
       <!-- 2. GitHub Card -->
-      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-gray-600/50 dark:hover:border-gray-500/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between space-y-6">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <div class="p-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white">
@@ -66,7 +66,7 @@
           </div>
 
           <div class="space-y-1">
-            <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-gray-500 dark:group-hover:text-gray-500 transition-colors">
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
               GitHub
             </h3>
             <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400">&#64;Gabrieldsrod</p>
@@ -90,10 +90,10 @@
       </div>
 
       <!-- 3. E-mail Card -->
-      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-red-600/50 dark:hover:border-red-500/50 transition-all duration-300 flex flex-col justify-between space-y-6">
+      <div class="group relative p-8 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:border-zinc-400 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between space-y-6">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
-            <div class="p-3.5 rounded-2xl bg-red-600/10 text-red-600 dark:text-red-500">
+            <div class="p-3.5 rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
               <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
@@ -102,10 +102,10 @@
           </div>
 
           <div class="space-y-1">
-            <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors">
               E-mail
             </h3>
-            <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400 select-all cursor-pointer hover:text-red-600 dark:hover:text-red-500 transition-colors" (click)="copyEmail()" [title]="lang.t().contact.clickToCopy">
+            <p class="text-xs font-mono text-zinc-500 dark:text-zinc-400 select-all cursor-pointer hover:text-zinc-900 dark:hover:text-white transition-colors" (click)="copyEmail()" [title]="lang.t().contact.clickToCopy">
               gabrieldsrodrigues19&#64;gmail.com
             </p>
           </div>

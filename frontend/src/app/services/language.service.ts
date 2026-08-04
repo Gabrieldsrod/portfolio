@@ -90,7 +90,7 @@ const DICTIONARY: Record<Language, Translations> = {
     },
     hero: {
       status: 'Estagiário de Tecnologia no FIT',
-      greeting: 'Olá, meu nome é',
+      greeting: 'Olá, eu sou',
       name: 'Gabriel da Silva Rodrigues',
       role: 'Estagiário de Tecnologia no FIT | Desenvolvedor Fullstack (Foco em Backend)',
       summary: 'Estudante de Engenharia da Computação e Desenvolvedor Fullstack com foco principal em Backend. Entusiasta de arquitetura de software, dedicado ao desenvolvimento de APIs com Java e Spring Boot, aplicações web reativas e soluções em IoT.',
