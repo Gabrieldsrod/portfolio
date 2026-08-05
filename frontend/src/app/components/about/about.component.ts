@@ -27,10 +27,14 @@ export class AboutComponent {
   ];
 
   readonly devopsTechs = [
-    'PostgreSQL', 'SQLite', 'Docker', 'ESP32 & IoT'
+    'PostgreSQL', 'SQLite', 'Docker', 'Linux', 'ESP32 & IoT'
   ];
 
   readonly learningTechs = [
     'Angular', 'NestJS', 'Redis'
   ];
+
+  isPrimary(tech: string): boolean {
+    return ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'].includes(tech);
+  }
 }
