@@ -2,6 +2,22 @@
   {
     "id": 1,
     "title": {
+      "pt": "Portfólio Profissional",
+      "en": "Professional Portfolio"
+    },
+    "description": {
+      "pt": "Aplicação web moderna, autoral e de alto desempenho desenvolvida para apresentar minha trajetória, projetos e competências em desenvolvimento Fullstack. Conta com suporte a múltiplos idiomas (PT/EN), modo escuro automático, navegação reativa e arquitetura SSR.",
+      "en": "Modern, custom, high-performance web application engineered to showcase my career journey, projects, and Fullstack skills. Features multi-language support (PT/EN), automatic dark mode, reactive navigation, and SSR architecture."
+    },
+    "technologies": ["Angular 19", "TypeScript", "Tailwind CSS v4", "SSR", "HTML5", "Docker"],
+    "imageUrl": "/assets/images/portfolio.webp",
+    "githubUrl": "https://github.com/Gabrieldsrod/portfolio",
+    "deployUrl": "https://gabrieldsrod.dev.br",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": {
       "pt": "Agendo - Gerenciador Inteligente de Cronograma de Estudos",
       "en": "Agendo - Smart Study Schedule Manager"
     },
@@ -80,7 +96,7 @@
     "featured": false
   },
   {
-    "id": 6,
+    "id": 7,
     "title": {
       "pt": "Controle de Mesas de Cacheta",
       "en": "Cacheta Card Game Table Controller"
