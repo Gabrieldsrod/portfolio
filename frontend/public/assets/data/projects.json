@@ -9,7 +9,7 @@
       "pt": "Aplicação web moderna, autoral e de alto desempenho desenvolvida para apresentar minha trajetória, projetos e competências em desenvolvimento Fullstack. Conta com suporte a múltiplos idiomas (PT/EN), modo escuro automático, navegação reativa e arquitetura SSR.",
       "en": "Modern, custom, high-performance web application engineered to showcase my career journey, projects, and Fullstack skills. Features multi-language support (PT/EN), automatic dark mode, reactive navigation, and SSR architecture."
     },
-    "technologies": ["Angular 19", "TypeScript", "Tailwind CSS v4", "SSR", "HTML5", "Docker"],
+    "technologies": ["Angular 21", "TypeScript", "Tailwind CSS v4", "SSR", "HTML5", "Docker"],
     "imageUrl": "/assets/images/portfolio.webp",
     "githubUrl": "https://github.com/Gabrieldsrod/portfolio",
     "deployUrl": "https://gabrieldsrod.dev.br",

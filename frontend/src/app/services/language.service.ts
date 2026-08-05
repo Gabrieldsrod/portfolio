@@ -154,7 +154,7 @@ const DICTIONARY: Record<Language, Translations> = {
     },
     footer: {
       rights: 'Todos os direitos reservados.',
-      builtWith: 'Desenvolvido com Angular 19 & Tailwind CSS v4'
+      builtWith: 'Desenvolvido com Angular 21'
     }
   },
   en: {
@@ -230,7 +230,7 @@ const DICTIONARY: Record<Language, Translations> = {
     },
     footer: {
       rights: 'All rights reserved.',
-      builtWith: 'Engineered with Angular 19 & Tailwind CSS v4'
+      builtWith: 'Developed with Angular 21'
     }
   }
 };
