@@ -17,18 +17,33 @@
 
     <!-- Open Graph / Social Sharing Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Gabriel da Silva Rodrigues | Desenvolvedor Fullstack (Foco em Backend)" />
-    <meta property="og:description" content="Portfólio profissional de Gabriel da Silva Rodrigues - Desenvolvedor Fullstack com foco principal em Backend (Java, Spring Boot, Node.js) e experiência em Angular, React e IoT." />
+    <meta
+      property="og:title"
+      content="Gabriel da Silva Rodrigues | Desenvolvedor Fullstack (Foco em Backend)"
+    />
+    <meta
+      property="og:description"
+      content="Portfólio profissional de Gabriel da Silva Rodrigues - Desenvolvedor Fullstack com foco principal em Backend (Java, Spring Boot, Node.js) e experiência em Angular, React e IoT."
+    />
     <meta property="og:image" content="/assets/images/profile.webp" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gabriel da Silva Rodrigues | Desenvolvedor Fullstack" />
-    <meta name="twitter:description" content="Desenvolvedor Fullstack com foco em Backend (Java, Spring Boot, Node.js)." />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedor Fullstack com foco em Backend (Java, Spring Boot, Node.js)."
+    />
     <meta name="twitter:image" content="/assets/images/profile.webp" />
 
     <!-- LCP Image Preload -->
-    <link rel="preload" as="image" href="/assets/images/profile.webp" type="image/webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/profile.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
 
     <!-- Google Fonts: Inter & Plus Jakarta Sans (Non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,7 +57,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <noscript>
       <link
@@ -52,6 +67,17 @@
     </noscript>
 
     <link rel="manifest" href="manifest.webmanifest" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNN0V9NV5Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-DNN0V9NV5Z');
+    </script>
   </head>
   <body
     class="bg-zinc-50 text-zinc-900 dark:bg-[#0F0F12] dark:text-zinc-100 antialiased transition-colors duration-300 selection:bg-red-600 selection:text-white min-h-screen"
@@ -60,4 +86,3 @@
     <noscript>Please enable JavaScript to continue using this application.</noscript>
   </body>
 </html>
-

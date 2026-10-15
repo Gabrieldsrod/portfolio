@@ -2,6 +2,7 @@ import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../models/project.model';
 import { LanguageService } from '../../services/language.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-project-card',
@@ -13,7 +14,13 @@ export class ProjectCardComponent {
   @Input({ required: true }) project!: Project;
 
   readonly lang = inject(LanguageService);
+  private readonly analytics = inject(AnalyticsService);
   imageFailed = false;
+
+  onProjectClick(type: 'github' | 'deploy'): void {
+    const targetUrl = type === 'github' ? this.project.githubUrl : this.project.deployUrl;
+    this.analytics.trackProjectClick(this.projectTitle, type, targetUrl);
+  }
 
   get displayImageUrl(): string {
     if (this.imageFailed) {

@@ -54,6 +54,7 @@
       <a
         *ngIf="project.githubUrl"
         [href]="project.githubUrl"
+        (click)="onProjectClick('github')"
         target="_blank"
         rel="noopener noreferrer"
         class="flex-1 py-2.5 px-3 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
@@ -67,6 +68,7 @@
       <a
         *ngIf="project.deployUrl"
         [href]="project.deployUrl"
+        (click)="onProjectClick('deploy')"
         target="_blank"
         rel="noopener noreferrer"
         class="flex-1 py-2.5 px-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-xs shadow-md shadow-red-600/20 flex items-center justify-center gap-1.5 transition-all">

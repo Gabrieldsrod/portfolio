@@ -12,6 +12,7 @@ import {
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { ThemeService } from '../../services/theme.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 interface Particle {
   x: number;
@@ -66,6 +67,7 @@ interface Particle {
 export class HeroComponent implements AfterViewInit, OnDestroy {
   readonly lang = inject(LanguageService);
   readonly theme = inject(ThemeService);
+  private readonly analytics = inject(AnalyticsService);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly ngZone = inject(NgZone);
 
@@ -75,8 +77,13 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
   readonly imageError = signal<boolean>(false);
   readonly copiedEmail = signal<boolean>(false);
 
+  trackSocial(platform: 'github' | 'linkedin' | 'email', action: 'link' | 'copy' = 'link'): void {
+    this.analytics.trackSocialClick(platform, 'hero', action);
+  }
+
   onEmailClick(event: MouseEvent): void {
     const email = 'gabrieldsrodrigues19@gmail.com';
+    this.trackSocial('email', 'copy');
     if (isPlatformBrowser(this.platformId)) {
       if (navigator?.clipboard?.writeText) {
         navigator.clipboard.writeText(email);
