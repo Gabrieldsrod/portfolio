@@ -1,0 +1,99 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Permissões mínimas necessárias para o workflow
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # =========================================================================
+  # JOB 1: CI (Continuous Integration)
+  # Executado em Pull Requests e Pushes na branch main
+  # Valida integridade do código, formatação, testes unitários e build Angular
+  # =========================================================================
+  ci:
+    name: Lint, Test & Build Validation
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js (v22)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Verificar Formatação (Prettier / Linter)
+        run: npx prettier --check "src/**/*.{ts,html,scss,json}"
+        continue-on-error: true
+
+      - name: Executar Testes Unitários
+        run: npm test -- --watch=false
+
+      - name: Compilar Aplicação (Build de Produção)
+        run: npm run build
+
+      - name: Validar Diretório de Saída (Artifacts)
+        run: |
+          test -d dist/portfolio/browser || { echo "❌ Diretório dist/portfolio/browser não encontrado!"; exit 1; }
+          echo "✔ Build gerado com sucesso em dist/portfolio/browser"
+
+  # =========================================================================
+  # JOB 2: CD (Continuous Deployment)
+  # Executado apenas após sucesso do CI e quando for Push/Merge na branch main
+  # Realiza o deploy na VPS via SSH utilizando Docker Compose
+  # =========================================================================
+  cd:
+    name: Deploy to VPS (Docker Compose)
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Conectar via SSH e Atualizar Aplicação na VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script_stop: true
+          script: |
+            echo "🚀 Iniciando deploy na VPS..."
+            
+            # Navega para o diretório do projeto na VM
+            cd ${{ secrets.APP_DIR || '~/portfolio' }}
+            
+            echo "📥 Atualizando código com a branch main..."
+            git fetch origin main
+            git reset --hard origin/main
+            
+            echo "🐳 Reconstruindo containers com Docker Compose..."
+            docker compose build --pull
+            docker compose up -d --remove-orphans
+            
+            echo "🧹 Limpando imagens antigas e camadas não utilizadas..."
+            docker image prune -f
+            
+            echo "✅ Deploy concluído com sucesso!"
