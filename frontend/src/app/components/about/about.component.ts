@@ -27,7 +27,7 @@ export class AboutComponent {
   ];
 
   readonly devopsTechs = [
-    'PostgreSQL', 'SQLite', 'Docker', 'Linux', 'ESP32 & IoT'
+    'PostgreSQL', 'SQLite', 'Docker', 'Linux', 'ESP32 & IoT', 'Git', 'GitHub Actions', 'CI/CD'
   ];
 
   readonly learningTechs = [

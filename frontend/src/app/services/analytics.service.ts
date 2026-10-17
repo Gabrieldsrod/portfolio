@@ -24,7 +24,7 @@ export class AnalyticsService {
     }
   }
 
-  trackProjectClick(projectName: string, linkType: 'github' | 'deploy', targetUrl?: string): void {
+  trackProjectClick(projectName: string, linkType: 'github' | 'deploy' | 'video', targetUrl?: string): void {
     this.trackEvent('project_click', {
       project_name: projectName,
       link_type: linkType,

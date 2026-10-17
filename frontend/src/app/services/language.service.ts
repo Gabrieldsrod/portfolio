@@ -52,6 +52,9 @@ export interface Translations {
     filterFeatured: string;
     viewCode: string;
     viewDeploy: string;
+    viewVideo: string;
+    watchOnYoutube: string;
+    closeModal: string;
     noProjects: string;
   };
   contact: {
@@ -130,6 +133,9 @@ const DICTIONARY: Record<Language, Translations> = {
       filterFeatured: 'Destaques',
       viewCode: 'Código Fonte',
       viewDeploy: 'Demo / Live',
+      viewVideo: 'Vídeo Demo',
+      watchOnYoutube: 'Assistir no YouTube',
+      closeModal: 'Fechar',
       noProjects: 'Nenhum projeto encontrado.'
     },
     contact: {
@@ -206,6 +212,9 @@ const DICTIONARY: Record<Language, Translations> = {
       filterFeatured: 'Featured',
       viewCode: 'Source Code',
       viewDeploy: 'Live Demo',
+      viewVideo: 'Video Demo',
+      watchOnYoutube: 'Watch on YouTube',
+      closeModal: 'Close',
       noProjects: 'No projects found.'
     },
     contact: {

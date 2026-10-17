@@ -13,8 +13,13 @@ export interface Project {
   title: ProjectTitle;
   description: ProjectDescription;
   technologies: string[];
-  imageUrl: string;
+  imageUrl?: string;
+  image?: string;
   githubUrl?: string;
   deployUrl?: string;
+  liveUrl?: string;
+  videoDemoUrl?: string;
+  videoDemo?: string;
   featured: boolean;
+  category?: string;
 }

@@ -13,6 +13,7 @@
     "imageUrl": "/assets/images/portfolio.webp",
     "githubUrl": "https://github.com/Gabrieldsrod/portfolio",
     "deployUrl": "https://gabrieldsrod.dev.br",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
@@ -25,10 +26,23 @@
       "pt": "Plataforma web criada para resolver o problema de organização nos estudos através da distribuição automática de disciplinas por prioridade, dificuldade e horários disponíveis, otimizando o aprendizado e a consistência com algoritmos inteligentes de pesos.",
       "en": "Web platform engineered to solve study organization challenges by automatically distributing subjects based on priority, difficulty, and available time slots, optimizing learning consistency through intelligent weighting algorithms."
     },
-    "technologies": ["Java 21", "Spring Boot", "React", "TypeScript", "Vite", "Tailwind CSS", "PostgreSQL", "Docker", "Swagger", "GitHub Actions", "CI/CD"],
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Docker",
+      "Swagger",
+      "GitHub Actions",
+      "CI/CD"
+    ],
     "imageUrl": "/assets/images/agendo.png",
     "githubUrl": "https://github.com/luizamantovani/Projeto-Desenvolvimento-Web",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
@@ -41,14 +55,51 @@
       "pt": "Plataforma ERP desenvolvida para otimizar e automatizar a administração de Centros de Treinamento, centralizando o controle de alunos, planos familiares e gestão financeira com motor transacional para garantir consistência em recálculos de faturamento e trocas de titulares.",
       "en": "Full-stack ERP platform engineered to streamline Training Center administration by centralizing student records, family plans, and financial management with a transactional engine for billing accuracy and seamless account transitions."
     },
-    "technologies": ["Java 21", "Spring Boot", "React", "TypeScript", "Vite",  "Tailwind CSS", "PostgreSQL", "Docker", "Swagger"],
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Docker",
+      "Swagger"
+    ],
     "imageUrl": "/assets/images/gestao-ct.png",
     "githubUrl": "https://github.com/Gabrieldsrod/gestao-ct",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
-    "id": 3,
+    "id": "3",
+    "title": {
+      "pt": "NFCareVet - Gestão Hospitalar Veterinária com NFC",
+      "en": "NFCareVet - NFC Veterinary Hospital Management"
+    },
+    "description": {
+      "pt": "Sistema fullstack em arquitetura monorepo para rastreabilidade clínica e atendimento veterinário à beira-leito via tags NFC. Conta com login rápido por crachá, prontuário instantâneo por aproximação, gestão de baias, linha do tempo clínica e controle de prescrições.",
+      "en": "Fullstack monorepo system for clinical traceability and bedside veterinary care via NFC tags. Features fast badge login, instant tap-to-view medical records, kennel management, clinical timeline, and prescription tracking."
+    },
+    "image": "assets/images/nfcarevet.webp",
+    "technologies": [
+      "NestJS",
+      "TypeScript",
+      "React",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "Web NFC"
+    ],
+    "githubUrl": "https://github.com/gabrieldsrod/NFCareVet",
+    "liveUrl": "",
+    "videoDemoUrl": "",
+    "featured": true,
+    "category": "fullstack"
+  },
+  {
+    "id": 4,
     "title": {
       "pt": "MyWay - Mapa de Acessibilidade",
       "en": "MyWay - Accessibility Map App"
@@ -61,10 +112,11 @@
     "imageUrl": "/assets/images/my-way.png",
     "githubUrl": "https://github.com/luizamantovani/UPX4_MapaDeAcessibilidade",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/mrEebpdq9mQ?si=prbe3G0S6GgLsGbo",
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": {
       "pt": "AcquaEnergy - Monitoramento Sustentável",
       "en": "AcquaEnergy - Sustainable IoT Monitoring"
@@ -77,10 +129,11 @@
     "imageUrl": "/assets/images/acqua-energy.png",
     "githubUrl": "https://github.com/Gabrieldsrod/acqua-energy",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/sXAoivzwp-M?si=Yp5VTHXqVHsTD0Nv",
     "featured": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": {
       "pt": "EcoLume - Armadilha Solar Automatizada",
       "en": "EcoLume - Automated Solar Mosquito Trap"
@@ -89,10 +142,20 @@
       "pt": "Iniciativa de saúde pública e automação sustentável que combate arboviroses (dengue, zika e chikungunya) por meio de armadilhas solares autônomas de captura do Aedes aegypti e portal web de conscientização comunitária e monitoramento de bateria.",
       "en": "Public health and sustainable automation initiative fighting mosquito-borne diseases via autonomous solar Aedes aegypti traps paired with a community awareness web portal and battery telemetry."
     },
-    "technologies": ["ESP32", "C", "JavaScript", "HTML5", "CSS3", "Painel Solar", "IoT", "Mobile Web"],
+    "technologies": [
+      "ESP32",
+      "C",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Painel Solar",
+      "IoT",
+      "Mobile Web"
+    ],
     "imageUrl": "/assets/images/eco-lume.jpg",
     "githubUrl": "https://github.com/Gabrieldsrod/EcoLume",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/3HZcfjDJ0Jg?si=Jhhmww4fwH2tS8rw",
     "featured": false
   },
   {
@@ -109,6 +172,7 @@
     "imageUrl": "/assets/images/cacheta.png",
     "githubUrl": "https://github.com/Gabrieldsrod/controle-cacheta",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": false
   }
 ]

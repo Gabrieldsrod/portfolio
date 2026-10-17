@@ -35,6 +35,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/luizamantovani/Projeto-Desenvolvimento-Web",
         deployUrl: "",
+        videoDemoUrl: "",
         featured: true
       },
       {
@@ -51,6 +52,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/Gabrieldsrod/gestao-ct",
         deployUrl: "",
+        videoDemoUrl: "",
         featured: true
       },
       {
@@ -67,6 +69,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/luizamantovani/UPX4_MapaDeAcessibilidade",
         deployUrl: "",
+        videoDemoUrl: "",
         featured: true
       },
       {
@@ -83,6 +86,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/Gabrieldsrod/acqua-energy",
         deployUrl: "",
+        videoDemoUrl: "",
         featured: true
       },
       {
@@ -99,6 +103,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/Gabrieldsrod/EcoLume",
         deployUrl: '',
+        videoDemoUrl: '',
         featured: true
       },
       {
@@ -115,6 +120,7 @@ export class ProjectService {
         imageUrl: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=1200&q=80",
         githubUrl: "https://github.com/Gabrieldsrod/controle-cacheta",
         deployUrl: '',
+        videoDemoUrl: '',
         featured: false
       }
     ];
