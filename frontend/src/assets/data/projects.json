@@ -73,30 +73,31 @@
     "featured": true
   },
   {
-    "id": "3",
+    "id": 3,
     "title": {
       "pt": "NFCareVet - Gestão Hospitalar Veterinária com NFC",
       "en": "NFCareVet - NFC Veterinary Hospital Management"
     },
     "description": {
-      "pt": "Sistema fullstack em arquitetura monorepo para rastreabilidade clínica e atendimento veterinário à beira-leito via tags NFC. Conta com login rápido por crachá, prontuário instantâneo por aproximação, gestão de baias, linha do tempo clínica e controle de prescrições.",
-      "en": "Fullstack monorepo system for clinical traceability and bedside veterinary care via NFC tags. Features fast badge login, instant tap-to-view medical records, kennel management, clinical timeline, and prescription tracking."
+      "pt": "Projeto idealizado por mim para revolucionar a rotina clínica veterinária à beira-leito, sendo também o único responsável por toda a engenharia de backend e arquitetura da API RESTful. Desenvolvi o ecossistema em NestJS, Prisma e PostgreSQL, implementando controle de acesso RBAC, resolução instantânea de prontuários por UID de tag NFC, motor transacional de prescrições e suporte a  idempotência para sincronização segura de rotinas offline.",
+      "en": "Project conceived by me to transform bedside veterinary care, where I also led the end-to-end backend engineering and RESTful API architecture. Built with NestJS, Prisma, and PostgreSQL, featuring RBAC security, instant medical record retrieval via NFC tag UIDs, transactional prescription engines, and idempotency headers for reliable offline synchronization."
     },
-    "image": "assets/images/nfcarevet.webp",
     "technologies": [
       "NestJS",
       "TypeScript",
-      "React",
       "Prisma",
       "PostgreSQL",
       "Docker",
-      "Web NFC"
+      "JWT",
+      "Swagger",
+      "RESTful API"
     ],
+    "imageUrl": "/assets/images/nfcarevet.webp",
     "githubUrl": "https://github.com/gabrieldsrod/NFCareVet",
-    "liveUrl": "",
+    "deployUrl": "https://nfcarevet.gabrieldsrod.dev.br",
     "videoDemoUrl": "",
     "featured": true,
-    "category": "fullstack"
+    "category": "backend"
   },
   {
     "id": 4,

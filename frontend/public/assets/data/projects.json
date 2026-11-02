@@ -9,10 +9,11 @@
       "pt": "Aplicação web moderna, autoral e de alto desempenho desenvolvida para apresentar minha trajetória, projetos e competências em desenvolvimento Fullstack. Conta com suporte a múltiplos idiomas (PT/EN), modo escuro automático, navegação reativa e arquitetura SSR.",
       "en": "Modern, custom, high-performance web application engineered to showcase my career journey, projects, and Fullstack skills. Features multi-language support (PT/EN), automatic dark mode, reactive navigation, and SSR architecture."
     },
-    "technologies": ["Angular 21", "TypeScript", "Tailwind CSS v4", "SSR", "HTML5", "Docker"],
+    "technologies": ["Angular 21", "TypeScript", "Tailwind CSS", "SSR", "HTML5", "Docker"],
     "imageUrl": "/assets/images/portfolio.webp",
     "githubUrl": "https://github.com/Gabrieldsrod/portfolio",
     "deployUrl": "https://gabrieldsrod.dev.br",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
@@ -25,10 +26,23 @@
       "pt": "Plataforma web criada para resolver o problema de organização nos estudos através da distribuição automática de disciplinas por prioridade, dificuldade e horários disponíveis, otimizando o aprendizado e a consistência com algoritmos inteligentes de pesos.",
       "en": "Web platform engineered to solve study organization challenges by automatically distributing subjects based on priority, difficulty, and available time slots, optimizing learning consistency through intelligent weighting algorithms."
     },
-    "technologies": ["Java 21", "Spring Boot", "React", "TypeScript", "Vite", "Tailwind CSS", "PostgreSQL", "Docker", "Swagger", "GitHub Actions", "CI/CD"],
-    "imageUrl": "/assets/images/agendo.webp",
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Docker",
+      "Swagger",
+      "GitHub Actions",
+      "CI/CD"
+    ],
+    "imageUrl": "/assets/images/agendo.png",
     "githubUrl": "https://github.com/luizamantovani/Projeto-Desenvolvimento-Web",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
@@ -41,14 +55,52 @@
       "pt": "Plataforma ERP desenvolvida para otimizar e automatizar a administração de Centros de Treinamento, centralizando o controle de alunos, planos familiares e gestão financeira com motor transacional para garantir consistência em recálculos de faturamento e trocas de titulares.",
       "en": "Full-stack ERP platform engineered to streamline Training Center administration by centralizing student records, family plans, and financial management with a transactional engine for billing accuracy and seamless account transitions."
     },
-    "technologies": ["Java 21", "Spring Boot", "React", "TypeScript", "Vite",  "Tailwind CSS", "PostgreSQL", "Docker", "Swagger"],
-    "imageUrl": "/assets/images/gestao-ct.webp",
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Docker",
+      "Swagger"
+    ],
+    "imageUrl": "/assets/images/gestao-ct.png",
     "githubUrl": "https://github.com/Gabrieldsrod/gestao-ct",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": true
   },
   {
     "id": 3,
+    "title": {
+      "pt": "NFCareVet - Gestão Hospitalar Veterinária com NFC",
+      "en": "NFCareVet - NFC Veterinary Hospital Management"
+    },
+    "description": {
+      "pt": "Projeto idealizado por mim para revolucionar a rotina clínica veterinária à beira-leito, sendo também o único responsável por toda a engenharia de backend e arquitetura da API RESTful. Desenvolvi o ecossistema em NestJS, Prisma e PostgreSQL, implementando controle de acesso RBAC, resolução instantânea de prontuários por UID de tag NFC, motor transacional de prescrições e suporte a  idempotência para sincronização segura de rotinas offline.",
+      "en": "Project conceived by me to transform bedside veterinary care, where I also led the end-to-end backend engineering and RESTful API architecture. Built with NestJS, Prisma, and PostgreSQL, featuring RBAC security, instant medical record retrieval via NFC tag UIDs, transactional prescription engines, and idempotency headers for reliable offline synchronization."
+    },
+    "technologies": [
+      "NestJS",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "JWT",
+      "Swagger",
+      "RESTful API"
+    ],
+    "imageUrl": "/assets/images/nfcarevet.webp",
+    "githubUrl": "https://github.com/gabrieldsrod/NFCareVet",
+    "deployUrl": "https://nfcarevet.gabrieldsrod.dev.br",
+    "videoDemoUrl": "",
+    "featured": true,
+    "category": "backend"
+  },
+  {
+    "id": 4,
     "title": {
       "pt": "MyWay - Mapa de Acessibilidade",
       "en": "MyWay - Accessibility Map App"
@@ -58,13 +110,14 @@
       "en": "Mobile application and geospatial portal developed to map, catalog, and share urban accessibility spots across the city, facilitating navigation and social inclusion through real-time location queries."
     },
     "technologies": ["TypeScript", "React Native", "PostgreSQL", "PostGIS"],
-    "imageUrl": "/assets/images/my-way.webp",
+    "imageUrl": "/assets/images/my-way.png",
     "githubUrl": "https://github.com/luizamantovani/UPX4_MapaDeAcessibilidade",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/mrEebpdq9mQ?si=prbe3G0S6GgLsGbo",
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": {
       "pt": "AcquaEnergy - Monitoramento Sustentável",
       "en": "AcquaEnergy - Sustainable IoT Monitoring"
@@ -74,13 +127,14 @@
       "en": "Sustainable IoT system designed to foster conscious water and energy usage during showers, utilizing presence sensors for real-time telemetry and environmental awareness reporting."
     },
     "technologies": ["ESP32", "C", "IoT", "JavaScript", "HTML/CSS"],
-    "imageUrl": "/assets/images/acqua-energy.webp",
+    "imageUrl": "/assets/images/acqua-energy.png",
     "githubUrl": "https://github.com/Gabrieldsrod/acqua-energy",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/sXAoivzwp-M?si=Yp5VTHXqVHsTD0Nv",
     "featured": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": {
       "pt": "EcoLume - Armadilha Solar Automatizada",
       "en": "EcoLume - Automated Solar Mosquito Trap"
@@ -89,10 +143,20 @@
       "pt": "Iniciativa de saúde pública e automação sustentável que combate arboviroses (dengue, zika e chikungunya) por meio de armadilhas solares autônomas de captura do Aedes aegypti e portal web de conscientização comunitária e monitoramento de bateria.",
       "en": "Public health and sustainable automation initiative fighting mosquito-borne diseases via autonomous solar Aedes aegypti traps paired with a community awareness web portal and battery telemetry."
     },
-    "technologies": ["ESP32", "C", "JavaScript", "HTML5", "CSS3", "Painel Solar", "IoT", "Mobile Web"],
-    "imageUrl": "/assets/images/eco-lume.webp",
+    "technologies": [
+      "ESP32",
+      "C",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Painel Solar",
+      "IoT",
+      "Mobile Web"
+    ],
+    "imageUrl": "/assets/images/eco-lume.jpg",
     "githubUrl": "https://github.com/Gabrieldsrod/EcoLume",
     "deployUrl": "",
+    "videoDemoUrl": "https://youtu.be/3HZcfjDJ0Jg?si=Jhhmww4fwH2tS8rw",
     "featured": false
   },
   {
@@ -106,10 +170,10 @@
       "en": "Native application developed to streamline card game matches and tournament organization, automating round timers, instant score calculations, and match history with secure storage."
     },
     "technologies": ["Java", "Android Studio", "SQLite"],
-    "imageUrl": "/assets/images/cacheta.webp",
+    "imageUrl": "/assets/images/cacheta.png",
     "githubUrl": "https://github.com/Gabrieldsrod/controle-cacheta",
     "deployUrl": "",
+    "videoDemoUrl": "",
     "featured": false
   }
 ]
-
